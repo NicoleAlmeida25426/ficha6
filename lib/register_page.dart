@@ -51,29 +51,34 @@ class _RegistoPageState extends State<RegistoPage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
+            Expanded(
+                child: TextField(
               controller: _loginController,
               decoration: const InputDecoration(labelText: 'Login'),
-            ),
-            TextField(
+            )),
+            Expanded(
+                child: TextField(
               controller: _passwordController,
               decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,
-            ),
-            TextField(
+            )),
+            Expanded(
+                child: TextField(
               controller: _emailController,
               decoration: const InputDecoration(labelText: 'Email'),
-            ),
-            TextField(
+            )),
+            Expanded(
+                child: TextField(
               controller: _telefoneController,
               decoration: const InputDecoration(labelText: 'Telefone'),
               keyboardType: TextInputType.phone,
-            ),
+            )),
             const SizedBox(height: 20),
-            ElevatedButton(
+            Expanded(
+                child: ElevatedButton(
               onPressed: _registarUtilizador,
               child: const Text('Registar'),
-            ),
+            )),
           ],
         ),
       ),
